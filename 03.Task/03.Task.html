@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is the error</title>
+  </head>
+  <body>
+    <h1>What is the error?</h1>
+    <h2>Description</h2>
+    <p>Mi a hiba? Javítsd ki a kódot.</p>
+    <pre>
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  
+  function Dog(name, breed) {
+    Animal.call(this, name);
+    this.breed = breed;
+  }
+  
+  Dog.prototype = Object.create(Animal.prototype);
+  Dog.prototype.constructor = Dog;
+  
+  const dog = new Dog('Buddy', 'Golden Retriever');
+  console.log(dog instanceof Animal);
+      </pre
+    >
+    <h3>Solution</h3>
+    <pre>
+class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+      
+      class Dog extends Animal {
+        constructor(name, breed) {
+          super(name); // Az Animal konstruktorának meghívása a super() segítségével
+          this.breed = breed;
+        }
+      }
+      
+      const dog = new Dog("Buddy", "Golden Retriever");
+      console.log(dog instanceof Animal); // true
+      </pre
+    >
+    <h4>Vagy</h4>
+    <br />
+    <pre>
+class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+      
+      class Dog extends Animal {
+        constructor(name, breed) {
+          super(name); // Az Animal konstruktorának meghívása a super() segítségével
+          this.breed = breed;
+        }
+      }
+      
+      const dog = new Dog("Buddy", "Golden Retriever");
+      console.log(dog instanceof Animal); // true
+      </pre
+    >
+    <script src="03.Task.js"></script>
+  </body>
+</html>

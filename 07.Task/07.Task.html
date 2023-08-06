@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Clock</title>
+    <link rel="stylesheet" type="text/css" href="07.Task.css" />
+  </head>
+  <body>
+    <h1>Clock</h1>
+    <h2>Description</h2>
+    <p>
+      Készíts egy aknakereső játékot, amelyben egy n x m méretű játéktáblán
+      elrejtett aknákat kell megtalálni. A játék kezdetén véletlenszerűen
+      elhelyezünk néhány aknát a játéktáblán, majd a játékos kattintásokkal
+      próbálja meg kinyitni a mezőket. A mezők lehetnek aknák vagy számok,
+      amelyek azt mutatják, hány akna található a mező szomszédságában (fenti,
+      alsó, bal oldali, jobb oldali és diagonális mezők).
+    </p>
+    <p>Az aknakereső osztálynak a következő metódusokat kell tartalmaznia:</p>
+    <ol>
+      <li>
+        initializeBoard(rows, cols, numMines): Ez a metódus inicializálja a
+        játéktáblát, beállítja a sorok és oszlopok számát, és véletlenszerűen
+        elhelyezi az aknákat a megadott szám alapján.
+      </li>
+      <li>
+        #openCell(row, col): Ez a metódus megnyitja a kiválasztott mezőt, és
+        ellenőrzi, hogy akna-e vagy sem. Ha aknát talál, a játék véget ér,
+        különben kiszámolja és megjeleníti a mező szomszédos aknáinak számát.
+      </li>
+      <li>
+        #displayBoard(): Ez a privát metódus megjeleníti a játéktáblát a
+        konzolon. Ha egy mezőt már megnyitottak, megjeleníti a szomszédos aknák
+        számát vagy az "M" betűt, ha az akna.
+      </li>
+      <li>
+        startGame(): Ez a metódus elindít egy végtelen ciklust ahol minden
+        ciklusban bekérjük a kiválasztott mezőt, meghívjuk az #openCell
+        metódust, ellenőrizzük hogy akna-e, ha akna akkor vége a játéknak, ha
+        nem akkor kirajzoljuk a táblát, #displayBoard(), majd kezdjük az új
+        ciklust.
+      </li>
+    </ol>
+    <p>
+      A játékos a sor és oszlop indexeket használja a mezők kiválasztásához, és
+      a játék folyamata során a játék táblája és állapota folyamatosan
+      megjelenik a konzolon.
+    </p>
+    <p>
+      A játékban a mezőket próbáld meg egy osztály hierarchiával megvalósítani.
+      pl. Field -- MineField, ClearField. Ezek ismerjék a szomszédaikat és abból
+      tudják számolni a környező MineField-ek számát, ill. jelzik ha
+      felrobbantak.
+    </p>
+    <pre>
+class Minesweeper {
+  // Implementáció a feladatban megadott metódusokkal és logikával
+}
+
+const game = new Minesweeper();
+game.initializeBoard(6, 6, 8);
+game.startGame();
+
+// A játékos lépései
+Mit lépsz?
+2,3
+
+######
+######
+######
+## ###
+######
+######
+
+// A játék folytatódik...
+Mit lépsz?
+3,3
+
+######
+######
+######
+##  ##
+######
+######
+
+// A játék folytatódik...
+Mit lépsz?
+3,2
+
+######
+######
+###1##
+##  ##
+######
+######
+
+// A játék folytatódik...
+Mit lépsz?
+2,2
+
+######
+######
+##*1##
+##  ##
+######
+######
+
+Vége a játéknak...
+
+  </pre
+    >
+    <h3>Solution</h3>
+    <div id="status"></div>
+    <table id="board"></table>
+    <button id="newGameButton">New Game</button>
+
+    <script src="07.Task.js"></script>
+  </body>
+</html>

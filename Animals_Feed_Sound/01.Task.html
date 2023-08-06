@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Game Application</title>
+    <link rel="stylesheet" href="01.Task.css" />
+  </head>
+  <body>
+    <h1>Animal Game Application</h1>
+    <h2>Description</h2>
+    <p>
+      Készíts egy egyszerű játékot, amelyben különböző állatokat lehet etetni és
+      hallgatni, hogy milyen hangot adnak ki. A játékban legyen egy alapvető
+      állat osztály, amelynek van egy feed és egy makeSound metódusa. Az Animal
+      osztályból származzanak le különböző állatok (pl. kutya, macska, madár),
+      és mindegyiküknek legyen saját hangja és étrendje. Az állatok etetésével
+      és meghallgatásával interaktálj a játékban.
+    </p>
+    <h3>Solution</h3>
+    <div class="container">
+      <div>
+        <button onclick="selectAnimal('kutya')">
+          <img src="icons/dog-icon.png" alt="" />
+        </button>
+        <button onclick="selectAnimal('macska')">
+          <img src="icons/Cute-Cat-icon.png" alt="" />
+        </button>
+        <button onclick="selectAnimal('madár')">
+          <img src="icons/bird-icon.png" alt="" />
+        </button>
+      </div>
+      <div>
+        <label for="animalType">Választott állat: </label>
+        <span id="selectedAnimal"></span>
+      </div>
+      <div id="interactionButtons">
+        <button onclick="selectInteraction('etet')">
+          <img src="icons/Steak-icon.png" alt="" />
+        </button>
+        <button onclick="selectInteraction('hang')">
+          <img src="icons/audio-file-icon.png" alt="" />
+        </button>
+      </div>
+      <div>
+        <button onclick="startGame()">Játék indítása</button>
+      </div>
+      <div id="output"></div>
+    </div>
+    <audio id="catSound">
+      <source src="./sounds/cat.mp3" />
+    </audio>
+
+    <audio id="dogSound">
+      <source src="./sounds/dog.mp3" />
+    </audio>
+
+    <audio id="birdSound">
+      <source src="./sounds/bird.mp3" />
+    </audio>
+
+    <script src="01.Task.js"></script>
+  </body>
+</html>

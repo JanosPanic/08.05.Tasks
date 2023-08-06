@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <h1>Clock</h1>
+    <h2>Description</h2>
+    <p>
+      Hozz létre egy láncolt lista osztályt, amely lehetővé teszi egyszerű
+      adatelemek tárolását és kezelését. A láncolt lista egy olyan
+      adatszerkezet, amely egymáshoz kapcsolt csomópontokból áll. Minden
+      csomópont tárol egy értéket (adatot) és egy mutatót a következő
+      csomópontra.
+    </p>
+    <p>A láncolt lista osztálynak a következő metódusokat kell tartalmaznia:</p>
+    <ol>
+      <li>
+        append(value): Ez a metódus egy új csomópontot ad hozzá a láncolt
+        listához, amely a megadott value értéket tartalmazza. Az új csomópontot
+        a lista végére kell illeszteni.
+      </li>
+
+      <li>
+        insertAt(index, value): Ez a metódus egy új csomópontot szúr be a
+        láncolt listába a megadott index pozícióra. Az index azt mutatja,
+        hányadik helyre kell beszúrni az új csomópontot.
+      </li>
+
+      <li>
+        deleteAt(index): Ez a metódus törli a láncolt lista index pozíciójú
+        csomópontját.
+      </li>
+
+      <li>
+        getAt(index): Ez a metódus visszaadja a láncolt lista index pozíciójú
+        csomópontjának értékét.
+      </li>
+
+      <li>
+        display(): Ez a metódus kiírja a láncolt lista összes elemét a konzolra.
+      </li>
+
+      <li>
+        size(): Ez a metódus visszaadja a láncolt lista méretét, azaz hány
+        csomópontot tartalmaz.
+      </li>
+    </ol>
+    <p>
+      A láncolt lista osztály használatakor a felhasználónak lehetősége kell
+      legyen hozzáadni, törölni, lekérdezni és listázni az elemeket.
+    </p>
+    <pre>
+  const linkedList = new LinkedList();
+  linkedList.append(10);
+  linkedList.append(20);
+  linkedList.append(30);
+  linkedList.insertAt(1, 15);
+  linkedList.display(); // Output: 10 -> 15 -> 20 -> 30
+  console.log(linkedList.getAt(2)); // Output: 20
+  console.log(linkedList.size()); // Output: 4
+  linkedList.deleteAt(1);
+  linkedList.display(); // Output: 10 -> 20 -> 30
+  console.log(linkedList.size()); // Output: 3
+  
+      </pre
+    >
+    <h3>Solution</h3>
+    <script src="06.Task.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Representative Class</title>
+  </head>
+  <body>
+    <h1>Animal Representative Class</h1>
+    <h2>Description</h2>
+    <p>
+      Készíts egy állatokat reprezentáló osztály hierarchiát az
+      objektumorientált programozás elveinek alkalmazásával. Az osztály
+      hierarchia alapja az "Animal" osztály, amely egy absztrakt osztály. Az
+      "Animal" osztály tartalmazza az állatok közös tulajdonságait, mint például
+      a nevet és a kort, valamint egy absztrakt hangotAd metódust, amelyet a
+      leszármaztatott osztályoknak kell implementálni. Hozz létre legalább két
+      leszármaztatott osztályt, amelyek az "Animal" osztályból származnak,
+      például "Dog" és "Cat" osztályok. Ezekben a leszármaztatott osztályokban
+      implementáld a hangotAd metódust, amely minden állat típusához különböző
+      hangot ad vissza. Az "Animal" osztályban definiálj egy getInfo metódust,
+      amely visszaadja az állat adatait, például "Név: X, Kor: Y év". A
+      leszármaztatott osztályokban ezt a metódust bővítsd ki az osztály saját
+      adattagjaival, amelyek az állatokra jellemző tulajdonságokat tárolják.
+    </p>
+    <pre>
+  // Az állatok hierarchiájának tesztelése
+  const dog = new Kutya("Bodri", 5, "Vizsla");
+  const cat = new Macska("Cirmi", 3, "Fekete-fehér");
+  
+  console.log(dog.getInfo()); // Output: "Név: Bodri, Kor: 5 év, Fajta: Vizsla"
+  console.log(dog.hangotAd()); // Output: "Vau vau!"
+  
+  console.log(cat.getInfo()); // Output: "Név: Cirmi, Kor: 3 év, Szín: Fekete-fehér"
+  console.log(cat.hangotAd()); // Output: "Miau miau!"
+  
+      </pre
+    >
+    <h3>Solution</h3>
+    <script src="04.Task.js"></script>
+  </body>
+</html>

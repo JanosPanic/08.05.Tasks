@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is the error</title>
+  </head>
+  <body>
+    <h1>What is the error?</h1>
+    <h2>Description</h2>
+    <p>Mi a hiba? Javítsd ki a kódot.</p>
+    <pre>
+        class Person {
+  
+    constructor(name) {
+      this.name = name;
+    }
+  
+  }
+  
+  class Worker extends Person {
+    constructor(name) {
+      this.name = name;
+      this.created = Date.now();
+    }
+  }
+  
+  let w1 = new Worker("Kapimo"); // - Itt a hiba: Error: this is not defined
+  alert(w1.name);
+  </pre
+    >
+
+    <h3>Solution</h3>
+
+    <pre>
+        <h4>2 hiba található a kódban
+ <ul> <li>1. A Worker osztálynak nincs meghívva az ősosztály konstruktora.</li>
+ <li>2. A Worker osztálynak a konstruktorában nem hívódik meg az ősosztály konstruktora a super() függvénnyel, így a this nem lesz inicializálva a name tulajdonság miatt.</li></ul>
+</h4>
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Worker extends Person {
+  constructor(name) {
+    super(name); // Az ősosztály konstruktorának meghívása a super() függvénnyel
+    this.created = Date.now();
+  }
+}
+
+let w1 = new Worker("Kapimo");
+alert(w1.name);
+
+   <h4>A super(name) hívással a Worker konstruktorban átadjuk a nevet az ősosztály konstruktorának, így a name tulajdonság megfelelően be lesz állítva a Worker példányon.</h4>
+
+    </pre>
+    <script src="02.Task.js"></script>
+  </body>
+</html>

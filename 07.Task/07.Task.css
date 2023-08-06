@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#board {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+td {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mine {
+  color: red;
+}
+
+.opened {
+  background-color: #ccc;
+}
+
+.mine,
+.opened,
+.clear {
+  color: #333;
+}
+
+#status {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+}
+
+.mine.opened {
+  background-color: red;
+}
