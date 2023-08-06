@@ -1,8 +1,8 @@
-# 1. TASK
+## 1. TASK
 
-## Készíts egy egyszerű játékot, amelyben különböző állatokat lehet etetni és hallgatni, hogy milyen hangot adnak ki. A játékban legyen egy alapvető állat osztály, amelynek van egy feed és egy makeSound metódusa. Az Animal osztályból származzanak le különböző állatok (pl. kutya, macska, madár), és mindegyiküknek legyen saját hangja és étrendje. Az állatok etetésével és meghallgatásával interaktálj a játékban
+### Készíts egy egyszerű játékot, amelyben különböző állatokat lehet etetni és hallgatni, hogy milyen hangot adnak ki. A játékban legyen egy alapvető állat osztály, amelynek van egy feed és egy makeSound metódusa. Az Animal osztályból származzanak le különböző állatok (pl. kutya, macska, madár), és mindegyiküknek legyen saját hangja és étrendje. Az állatok etetésével és meghallgatásával interaktálj a játékban
 
-# 2. TASK
+## 2. TASK
 
 ## Mi a hiba? Javítsd ki a kódot.
 
@@ -24,9 +24,9 @@ this.created = Date.now();
 let w1 = new Worker("Kapimo"); // - Itt a hiba: Error: this is not defined
 alert(w1.name);
 
-# 3. TASK
+## 3. TASK
 
-## Mi a hiba? Javítsd ki a kódot.
+### Mi a hiba? Javítsd ki a kódot.
 
 class Animal {
 constructor(name) {
@@ -45,9 +45,9 @@ Dog.prototype.constructor = Dog;
 const dog = new Dog('Buddy', 'Golden Retriever');
 console.log(dog instanceof Animal);
 
-# 4. TASK
+## 4. TASK
 
-## Készíts egy állatokat reprezentáló osztály hierarchiát az objektumorientált programozás elveinek alkalmazásával. Az osztály hierarchia alapja az "Animal" osztály, amely egy absztrakt osztály. Az "Animal" osztály tartalmazza az állatok közös tulajdonságait, mint például a nevet és a kort, valamint egy absztrakt hangotAd metódust, amelyet a leszármaztatott osztályoknak kell implementálni. Hozz létre legalább két leszármaztatott osztályt, amelyek az "Animal" osztályból származnak, például "Dog" és "Cat" osztályok. Ezekben a leszármaztatott osztályokban implementáld a hangotAd metódust, amely minden állat típusához különböző hangot ad vissza. Az "Animal" osztályban definiálj egy getInfo metódust, amely visszaadja az állat adatait, például "Név: X, Kor: Y év". A leszármaztatott osztályokban ezt a metódust bővítsd ki az osztály saját adattagjaival, amelyek az állatokra jellemző tulajdonságokat tárolják.
+### Készíts egy állatokat reprezentáló osztály hierarchiát az objektumorientált programozás elveinek alkalmazásával. Az osztály hierarchia alapja az "Animal" osztály, amely egy absztrakt osztály. Az "Animal" osztály tartalmazza az állatok közös tulajdonságait, mint például a nevet és a kort, valamint egy absztrakt hangotAd metódust, amelyet a leszármaztatott osztályoknak kell implementálni. Hozz létre legalább két leszármaztatott osztályt, amelyek az "Animal" osztályból származnak, például "Dog" és "Cat" osztályok. Ezekben a leszármaztatott osztályokban implementáld a hangotAd metódust, amely minden állat típusához különböző hangot ad vissza. Az "Animal" osztályban definiálj egy getInfo metódust, amely visszaadja az állat adatait, például "Név: X, Kor: Y év". A leszármaztatott osztályokban ezt a metódust bővítsd ki az osztály saját adattagjaival, amelyek az állatokra jellemző tulajdonságokat tárolják.
 
 // Az állatok hierarchiájának tesztelése
 const dog = new Kutya("Bodri", 5, "Vizsla");
@@ -59,9 +59,9 @@ console.log(dog.hangotAd()); // Output: "Vau vau!"
 console.log(cat.getInfo()); // Output: "Név: Cirmi, Kor: 3 év, Szín: Fekete-fehér"
 console.log(cat.hangotAd()); // Output: "Miau miau!"
 
-# 5. TASK
+## 5. TASK
 
-## Az alábbi órát megvalósító kódban másodpercenként növeljük az időt. Csinálj egy kiterjesztést (írj egy új osztályt ami örökli ezt) ahol be lehet állítani, hogy milyen időközönként frissítse a kiírást.
+### Az alábbi órát megvalósító kódban másodpercenként növeljük az időt. Csinálj egy kiterjesztést (írj egy új osztályt ami örökli ezt) ahol be lehet állítani, hogy milyen időközönként frissítse a kiírást.
 
 class Clock {
 constructor({ template }) {
@@ -99,9 +99,9 @@ this.timer = setInterval(() => this.render(), 1000);
 }
 }
 
-# 6. TASK
+## 6. TASK
 
-## Hozz létre egy láncolt lista osztályt, amely lehetővé teszi egyszerű adatelemek tárolását és kezelését. A láncolt lista egy olyan adatszerkezet, amely egymáshoz kapcsolt csomópontokból áll. Minden csomópont tárol egy értéket (adatot) és egy mutatót a következő csomópontra.
+### Hozz létre egy láncolt lista osztályt, amely lehetővé teszi egyszerű adatelemek tárolását és kezelését. A láncolt lista egy olyan adatszerkezet, amely egymáshoz kapcsolt csomópontokból áll. Minden csomópont tárol egy értéket (adatot) és egy mutatót a következő csomópontra.
 
 A láncolt lista osztálynak a következő metódusokat kell tartalmaznia:
 
@@ -125,7 +125,7 @@ linkedList.deleteAt(1);
 linkedList.display(); // Output: 10 -> 20 -> 30
 console.log(linkedList.size()); // Output: 3
 
-# 7. TASK
+## 7. TASK
 
 ## Készíts egy aknakereső játékot, amelyben egy n x m méretű játéktáblán elrejtett aknákat kell megtalálni. A játék kezdetén véletlenszerűen elhelyezünk néhány aknát a játéktáblán, majd a játékos kattintásokkal próbálja meg kinyitni a mezőket. A mezők lehetnek aknák vagy számok, amelyek azt mutatják, hány akna található a mező szomszédságában (fenti, alsó, bal oldali, jobb oldali és diagonális mezők).
 
@@ -151,44 +151,16 @@ game.startGame();
 Mit lépsz?
 2,3
 
-<!-- ######
-######
-######
-## ###
-######
-###### -->
-
 // A játék folytatódik...
 Mit lépsz?
 3,3
-
-<!-- ######
-######
-######
-##  ##
-######
-###### -->
 
 // A játék folytatódik...
 Mit lépsz?
 3,2
 
-<!-- ######
-######
-###1##
-##  ##
-######
-###### -->
-
 // A játék folytatódik...
 Mit lépsz?
 2,2
-
-<!-- ######
-######
-##*1##
-##  ##
-######
-###### -->
 
 Vége a játéknak...
